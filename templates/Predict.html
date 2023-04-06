@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta charset="UTF-8">
+<title>Predict</title>
+<meta charset="utf-8">
+<meta name="viewpoint" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    .main{
+            width: 900px;
+            height:auto;
+            background:linear-gradient(45deg, white, #E5A4CB);
+            border-radius: 8px;
+            margin:50px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            padding:20px;
+        }
+        input[type="number"]{
+            width: auto;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #45062E ;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-right:10px;
+        }
+        input[type="number"]::placeholder{
+            color:#18314F;
+            }
+        input[type=submit]{
+            background-color:#592E83;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 20px;
+            margin-left:50%;
+            transform:translateX(-100%);
+            width:200px;
+        }
+
+        h1{
+            font-size:40px;
+            color:#592E83;
+            text-shadow: 2px 2px grey;
+        }
+        form{
+            display:inline-block;
+        }
+        h2{
+            font-size:30px;
+            color:#592E83;
+        }
+        body{
+            background-image:url("{%static 'images/bg.jpg'%}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+</head>
+<body style="text-align: center">
+
+    <h1> WELCOME TO PREDICT PAGE</h1>
+    <br>
+    <br>
+    <br>
+
+    <div class="main">
+        <h1>Please enter the following values: </h1>
+        <form action="result">
+
+
+            <input type="number" name="n1" placeholder="Area">
+            <input type="number" name="n2" placeholder="Bedrooms">
+            <input type="number" name="n3" placeholder="Bathrooms">
+            <input type="number" name="n4" placeholder="Stories">
+            <input type="number" name="n5" placeholder="Mainroad">
+            <input type="number" name="n6" placeholder="Guestroom">
+            <input type="number" name="n7" placeholder="Basement">
+            <input type="number" name="n8" placeholder="Hotwaterheating">
+            <input type="number" name="n9" placeholder="Airconditioning">
+            <input type="number" name="n10" placeholder="Parking">
+            <input type="number" name="n11" placeholder="Prefarea">
+            <input type="submit" value="PREDICT">
+
+        </form>
+            <div class="row">
+                <h2>{{ result2 }}</h2>
+            </div>
+
+    </div>
+
+</body>
+</html>
